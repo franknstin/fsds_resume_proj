@@ -1,12 +1,14 @@
 from flask import Flask
 
-app=Flask(__name__)
+# create an instance of the Flask class with the name of the current module
+app = Flask(__name__)
 
-
+# define a route for the path '/' with methods 'GET' and 'POST'
 @app.route("/", methods=["GET", "POST"])
 def index():
     return "starting machine learning project"
 
-
-if __name__=="__main__":
+# run the application in debug mode if this file is executed directly
+if __name__ == "__main__":
     app.run(debug=True)
+
