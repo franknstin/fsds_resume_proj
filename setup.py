@@ -1,5 +1,5 @@
-from setuptools import setup
-from typing import List, Dict
+from setuptools import setup, find_packages
+from typing import List
 
 
 #declaring variables for the setup function
@@ -26,7 +26,7 @@ setup(
     version=VERSION,
     author=AUTHOR_NAME,
     description=DESCRIPTION,
-    packages=PACKAGES,
+    packages=find_packages(),
     install_requries=get_requirement_list()
 )
 
