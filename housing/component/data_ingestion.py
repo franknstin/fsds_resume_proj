@@ -1,6 +1,6 @@
 from housing.exception import HousingException
 import sys, os
-from housing.entity.config_entit import DataIngestionConfig
+from housing.entity.config_entity import DataIngestionConfig
 from housing.config.configuration import Configuration
 from housing.logger import logging
 from housing.entity.artifact_entity import DataIngestionArtifact
@@ -45,7 +45,7 @@ class DataIngestion:
 
     def extract_tgz_file(self, tgz_file_path:str):
         try:
-            raw_data_dir = self.data_ingestion_config.raw_Data_dir
+            raw_data_dir = self.data_ingestion_config.raw_data_dir
 
             if os.path.exists(raw_data_dir):
                 os.remove(raw_data_dir)
@@ -63,7 +63,7 @@ class DataIngestion:
         
     def split_data_as_train_test(self)-> DataIngestionArtifact:
         try:
-            raw_data_dir = self.data_ingestion_config.raw_Data_dir
+            raw_data_dir = self.data_ingestion_config.raw_data_dir
 
             file_name = os.listdir(raw_data_dir)[0]
             housing_file_path = os.path.join(raw_data_dir, file_name)

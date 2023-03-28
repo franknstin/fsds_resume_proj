@@ -1,7 +1,7 @@
 from housing.exception import HousingException
 import sys, os
 from housing.component.data_ingestion import DataIngestion
-from housing.entity.config_entit import DataIngestionConfig
+from housing.entity.config_entity import DataIngestionConfig
 from housing.config.configuration import Configuration
 
 
